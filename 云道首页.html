@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+    a {
+      color: #666;
+    }
+
+    a:hover {
+      color: #2288f6;
+    }
+
+    .w1054 {
+      width: 1054px;
+      margin: 0 auto;
+    }
+
+    .w1222 {
+      width: 1222px;
+      margin: o auto;
+    }
+
+    .pt42 {
+      padding-top: 42px;
+    }
+
+    .c228 {
+      color: #2288f6;
+    }
+
+    .c333 {
+      color: #333;
+    }
+
+    .c666 {
+      color: #666;
+    }
+    
+    .cfff {
+      color: #fff;
+    }
+
+    .fz14 {
+      font-size: 14px;
+    }
+
+    .fz24 {
+      font-size: 24px;
+    }
+
+    .fz400 {
+      font-weight: 400;
+    }
+
+    .lh24 {
+      line-height: 24px;
+    }
+
+    .fl {
+      float: left;
+    }
+
+    .fr {
+      float: right;
+    }
+
+    .ali-center {
+      text-align: center;
+    }
+
+    .wrap-spacing {
+      padding: 64px 0 60px;
+    }
+
+    /* ===== header start ===== */
+    .header {
+      min-width: 1054px;
+    }
+
+    .header .head-content span {
+      width: 0;
+      text-indent: -9999px;
+      visibility: hidden;
+      height: 0;
+      /* display: none; */
+    }
+
+    .nav {
+      width: 648px;
+    }
+
+    .nav ul li {
+      float: left;
+      font-size: 18px;
+      line-height: 100px;
+      padding: 0 20px;
+    }
+
+    /* ===== banner start ===== */
+    .banner {
+      height: 620px;
+      background: #fff url(images/banner.jpg) no-repeat center/cover;
+    }
+
+    /* ===== container start ===== */
+    .container {
+      padding-bottom: 140px;
+      background-color: #fafafa;
+    } 
+    
+    .container h2 img {
+      width: 167px;
+      height: 47px;
+    }
+
+    .container .con-title {
+      text-align: center; /* img 也是受 text-align影响的 它也是行内元素 */
+    }
+
+    .con-title:before,
+    .con-title:after {
+      content: "";
+      display: inline-block;
+      width: 417px;
+      height: 1px;
+      background-color: #ccc;
+    }
+
+    /* ===== .con-server start ===== */
+    .con-server .con-des {
+      padding: 28px 106px;
+      text-align: center;
+    }
+
+    .con-server .con-wrap li {
+      box-sizing: border-box;
+      float: left;
+      width: 320px;
+      padding: 42px 42px 0;
+      border: 1px solid #e7ebe9;
+    }
+
+    .con-server .con-wrap li.wrap-middle {
+      margin: 0 47px;
+    }
+
+    .con-server .con-wrap .con-list-title {
+      line-height: 52px;
+      padding-top: 28px;
+    }
+
+    .con-server .con-wrap .con-list-btn {
+      display: block;
+      width: 150px;
+      margin: 35px auto 0;
+      line-height: 38px;
+      color: #ff9412;
+      border: 1px solid #ff9412;
+      /* background-color: #ff9412; */
+      border-radius: 4px;
+    }
+
+    .con-server .con-wrap .con-list-btn:hover {
+      display: block;
+      width: 150px;
+      margin: 35px auto 0;
+      line-height: 38px;
+      color: #fff;
+      background-color: #ff9412;
+      border-radius: 4px;
+    }
+
+    /* ===== con-case start ===== */
+    .con-case {
+      background-color: #fff;
+    }
+ 
+    .con-case .con-wrap {
+      position: relative;
+      margin-top: 42px;
+    }
+
+    .con-case .con-wrap img {
+      width: 324px;
+      height: 211px;
+    }
+
+    .con-case .con-wrap li {
+      position: relative;
+      float: left;
+      width: 324px;
+      height: 211px;
+    }
+
+    .con-case .con-wrap li.case-middle {
+      margin: 0 40px; 
+    } 
+
+    .con-case .con-wrap .case-des {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      line-height: 46px;
+      background-color: rgba(0,0,0,.3);
+    }
+
+    .con-case .con-wrap .case-mask {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(images/fdj.png) rgba(0,0,0,.5) no-repeat center;
+    }
+
+    .con-case li:hover .case-mask {
+      display: block;
+    }
+
+    .con-case .con-wrap:before,
+    .con-case .con-wrap:after {
+      content: "<";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto auto;
+      width: 60px;
+      height: 60px;
+      font-size: 53px;
+      line-height: 54px;
+      color: #fff;
+      text-align: center;
+      background-color: rgba(0,0,0,.6);
+      border-radius: 50%;
+    }
+
+    .con-case .con-wrap:before {
+      left: -90px;
+      
+    }
+
+    .con-case .con-wrap:after {
+      content: ">";
+      right: -90px;
+    }
+
+    /* ===== .con-media start ===== */
+    .con-media .con-wrap {
+      overflow: hidden;
+      position: relative;
+      left: -20px;
+      width: 1106px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    .con-media .con-wrap ul {
+      overflow: hidden;
+      position: relative;
+      left: -20px;
+      width: 1154px;
+      height: 242px;
+    }
+
+    .con-media .con-wrap li {
+      float: left;
+      width: 225px;
+      /* height: 80px; */
+      line-height: 80px;
+      text-align: center;
+      border-right: 1px dashed #ccc;
+      border-bottom: 1px dashed #ccc;
+    }
+
+    .con-media .con-wrap li:nth-of-type(5n+3) {
+      width: 235px;
+    }
+
+    .con-media .con-wrap li:nth-of-type(5n+2),
+    .con-media .con-wrap li:nth-of-type(5n+4) {
+      width: 230px;
+    }
+
+    /*===== footer start ===== */
+    .footer {
+      background-color: #212425;
+      padding-top: 50px;
+      padding-bottom: 52px;
+      font-size: 14px;
+    }
+
+    .footer .foo-nav a {
+      color: #f0f0f1;
+    }
+
+    .footer .foot-nav span {
+      color: #7e7e7e;
+      padding: 0 14px;
+    }
+
+    .footer .foot-reference {
+      padding-top: 24px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="head-content w1222 clearfix">
+      <div class="logo fl">
+        <h1>
+          <a href="#">
+            <span>云道首页</span>
+            <img src="images/logo.png" width="223" height="100" alt="logo">
+          </a>
+        </h1>
+      </div>
+
+      <div class="nav fr">
+        <ul class="clearfix">
+          <li><a href="#">首页</a></li>
+          <li><a href="#">云云商城</a></li>
+          <li><a href="#">智慧门店</a></li>
+          <li><a href="#">营销平台</a></li>
+          <li><a href="#">媒体联盟</a></li>
+          <li><a href="#">关于云道</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner">
+    <!-- 背景banner -->
+    <!-- <img src="images/banner(1).jpg" width="1903" height="620" alt="banner"> -->
+  </div>
+
+  <div class="container">
+    <div class="con-server wrap-spacing">
+      <h2 class="con-title">
+        <img src="images/ser.png" width="167" height="47" alt="ser">
+      </h2>
+      <p class="con-des lh24 fz14 c666">
+        shopcmd云道，国内领先的独立电商解决方案及全渠道营销平台。完整的产品体系，简约的系统，个性化前端，全覆盖多渠道营销体系...
+        我们致力于打造一个服务于品牌商城/独立电商的完整生态，让企业的独立电商之路变得更简单，也更有价值！        
+      </p>
+      <div class="con-wrap pt42 w1054">
+        <ul class="clearfix">
+          <li>
+              <img src="images/icon1.png" width="248" height="132" alt="!">
+              <h3 class="con-list-title ali-center fz24 fw400">我是卖家</h3>
+              <p class="lh24 fz14 c666">shopcmd云电商解决方案，我们不仅仅是领先的独立商城建站系统。我们 从互联网时代品牌建设和品牌营销的全新视角，赋予了品牌商城及独立电商更 大的生存空间和存在价值！</p>
+              <a class="con-list-btn ali-center fz14" href="#">我要建站</a>
+          </li>
+          <li class="wrap-middle">
+            <img src="images/icon2.png" width="248" height="132" alt="!">
+            <h3 class="con-list-title ali-center fz24 fw400">我要营销</h3>
+            <p class="lh24 fz14 c666">云道不断完善的营销系统，联合优质媒体资源，集成常用的网络营销模式及终端，以最简单的产品形态，帮助独立商城实现店铺及商品信息在全网的快速分销。</p>
+            <a class="con-list-btn ali-center fz14" href="#">我要推广</a>
+          </li>
+          <li>
+            <img src="images/icon3.png" width="248" height="132" alt="!">
+            <h3 class="con-list-title ali-center fz24 fw400">媒体合作</h3>
+            <p class="lh24 fz14 c666">真正的全民营销时代，无需学习，无需维护，通过你的网站，朋友圈，媒体流量，移动展现，媒体解决方案获取收益。我们致力于实现合作媒体流量价值的最大化。</p>
+            <a class="con-list-btn ali-center fz14" href="#">我要合作</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="con-case wrap-spacing">
+      <h2 class="con-title">
+        <img src="images/case.png" width="167" height="45" alt="!">
+      </h2>
+      <div class="con-wrap w1054">
+        <ul class="clearfix">
+          <li>
+            <img src="images/serv.jpg" width="311" height="220" alt="!">
+            <p class="case-des fz14 cfff ali-center">帮助中小企业快速开启阿萨德打撒电子商务</p>
+            <div class="case-mask"></div>
+          </li>
+          <li class="case-middle">
+            <img src="images/download.png" width="322" height="211" alt="!">
+            <p class="case-des fz14 cfff ali-center">帮助中小企业快速开启阿萨德打撒电子商务</p>
+            <div class="case-mask"></div>
+          </li>
+          <li>
+            <img src="images/pro.png" width="324" height="211" alt="!">
+            <p class="case-des fz14 cfff ali-center">帮助中小企业快速开启阿萨德打撒电子商务</p>
+            <div class="case-mask"></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="con-media wrap-spacing">
+      <h2 class="con-title">
+        <img src="images/media.png" width="165" height="45" alt="!">
+      </h2>
+      <div class="con-wrap">
+        <ul class="clearfix">
+          <li><a href="#"><img src="images/tb.png" alt="!" width="103" height="40"></a></li>
+          <li><a href="#"><img src="images/jd.png" alt="!" width="118" height="33"></a></li>
+          <li><a href="#"><img src="images/sp.png" alt="!" width="124" height="38"></a></li>
+          <li><a href="#"><img src="images/al.png" alt="!" width="106" height="41"></a></li>
+          <li><a href="#"><img src="images/zk.png" alt="!" width="106" height="45"></a></li>
+
+          <li><a href="#"><img src="images/tb.png" alt="!" width="103" height="40"></a></li>
+          <li><a href="#"><img src="images/jd.png" alt="!" width="118" height="33"></a></li>
+          <li><a href="#"><img src="images/sp.png" alt="!" width="124" height="38"></a></li>
+          <li><a href="#"><img src="images/al.png" alt="!" width="106" height="41"></a></li>
+          <li><a href="#"><img src="images/zk.png" alt="!" width="106" height="45"></a></li>
+
+          <li><a href="#"><img src="images/tb.png" alt="!" width="103" height="40"></a></li>
+          <li><a href="#"><img src="images/jd.png" alt="!" width="118" height="33"></a></li>
+          <li><a href="#"><img src="images/sp.png" alt="!" width="124" height="38"></a></li>
+          <li><a href="#"><img src="images/al.png" alt="!" width="106" height="41"></a></li>
+          <li><a href="#"><img src="images/zk.png" alt="!" width="106" height="45"></a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer ali-center">
+    <p class="foot-nav">
+      <span>|</span>
+      <a href="#">首页</a>
+      <span>|</span>
+      <a href="#">官网云商城</a>
+      <span>|</span>
+      <a href="#">智慧门店</a>
+      <span>|</span>
+      <a href="#">营销平台</a>
+      <span>|</span>
+      <a href="#">媒体联盟</a>
+      <span>|</span>
+      <a href="#">关于我们</a>
+    </p>
+
+    <p class="foot-reference">
+      @Copyright 2015 苏州海云网络科技有限公司版权所有 | 苏ICP备15038170号 -3
+    </p>
+  </div>
+</body>
+
+</html>
+
+<!-- 
+  (查找内容)快捷键: ctrl + f
+  (查找行数)快捷键: ctrl + g
+ -->
+
+<!-- 
+  注意：使用 ul li 做导航栏比较容易扩展
+        但底部导航栏很少会弄多级导航，所以用 p span a 就够了
+
+  小技巧：底部有几行就用几个 p 不需要使用 div
+ -->
+
+<!-- 
+  提问：
+      边框重叠的问题要怎么解决呢？
+ -->
+
+<!-- 
+  快捷键：ul>li*5>a[href=#]>img[]
+         ul>li*5>a+p
+  <ul>
+    <li><a href="#"><img src="images/tb.png" alt="!" width="103" height="40"></a></li>
+    <li><a href="#"><img src="images/tb.png" alt="!" width="103" height="40"></a></li>
+    <li><a href="#"><img src="images/tb.png" alt="!" width="103" height="40"></a></li>
+    <li><a href="#"><img src="images/tb.png" alt="!" width="103" height="40"></a></li>
+    <li><a href="#"><img src="images/tb.png" alt="!" width="103" height="40"></a></li>
+  </ul>
+ -->
+
+<!-- 
+  注意：position 中的 right 是不能覆盖 left 的，它俩属于两个不同的属性
+ -->
+
+<!-- 
+  提问：
+    为什么 .con-case li:hover .case-mask {}这样写才有蒙版层效果
+    而  .con-case .con-wrap .case-mask:hover {} 这样写没有效果？
+  解答：
+    因为 case-mask 设置了 diaplay: none; 之后这个元素就不存在了，
+    所以你之后再设置 case-mask:hover 无效了，因为它找不到 case-mask这个元素了.
+
+ -->
+
+<!-- 
+  当你设置 inline-block 之后,是没有办法设置左右 auto 的;
+  设置成 block 就可以啦！
+ -->
+
+<!-- 
+  .lh52 {
+    line-height: 1.5;
+  }
+  意味着 行高是字体大小的1.5倍
+ -->
+
+<!-- 
+  提问： 为什么要设置怪异盒模型？
+ -->
+
+<!-- 
+  内边距最好是测量文本的两端
+ -->
+
+<!-- 
+  上下边距不要设置子元素外边距，最好是设置大盒子的内边距
+ -->
+
+<!-- 
+  盒子模型外边距不包括边框
+ -->
+
+<!-- 
+  快捷键：ul>li*6>a + tab
+
+  <ul>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+</ul>
+ -->
